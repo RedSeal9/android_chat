@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 // Instantiate the RequestQueue.
         val queue = Volley.newRequestQueue(this)
-        val url = "https://max3.app"
+        val url = "https://max3.app/music/audio/"
 
 // Request a string response from the provided URL.
         val stringRequest = StringRequest(Request.Method.GET, url,
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                     // Display the first 500 characters of the response string.
                     textView.text = response
                 },
-                { textView.text = "something borked for some reason\n\ncheck if you have an internet connection\n\n-redseal" })
+                { textView.text = "something borked for some reason\n\ncheck if you have an internet connection\n\n-red" })
 
 // Add the request to the RequestQueue.
         queue.add(stringRequest)
