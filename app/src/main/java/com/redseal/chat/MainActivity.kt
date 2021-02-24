@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                     // Display the first 500 characters of the response string.
                     textView.text = response
                 },
-                { textView.text = "something borked for some reason\n\ncheck if you have an internet connection\n\n--red" })
+                { textView.text = "something borked for some reason\n\ncheck if you have an internet connection\n\n-red" })
 
 // Add the request to the RequestQueue.
         queue.add(stringRequest)
