@@ -16,7 +16,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    if (System.getenv('jenkins') != null) {
+    
         signingConfigs {
 
             release {
@@ -30,11 +30,11 @@ android {
                 v2SigningEnabled true
             }
         }
-    }
+
     buildTypes {
         release {
-            if (System.getenv('jenkins') != null) {signingConfig signingConfigs.release}
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
